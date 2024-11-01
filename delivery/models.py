@@ -23,7 +23,7 @@ class Parcel(models.Model):
     status = models.CharField(max_length=20, choices = STATUS_CHOICES, default='pending')
     sender = models.ForeignKey(CustomUser,related_name='sent_parcels',on_delete=models.CASCADE)
     receiver_name = models.CharField(max_length=255)
-    receiver_adress = models.TextField()
+    receiver_address = models.TextField()
     courier = models.ForeignKey(CustomUser, related_name='courier_parcels',on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     delivered_at = models.DateTimeField(null=True, blank=True)
@@ -31,6 +31,6 @@ class Parcel(models.Model):
 
 
 class DeliveryProof(models.Model):
-    parcel = models.OneToOneField(Parcel, on_delete=models.CASCADE, related_name = 'delivery_proof')
+    parcel = models.OneToOneField(Parcel, on_delete=models.CASCADE,related_name='delivery_proof')
     image = models.ImageField(upload_to = 'delivery_proofs/')
     timestamp = models.DateTimeField(auto_now_add=True)
