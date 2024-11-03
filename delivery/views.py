@@ -22,6 +22,6 @@ class ParcelViewset(viewsets.ModelViewSet):
 
 class DeliveryProofViewset(viewsets.ModelViewSet):
     queryset = DeliveryProof.objects.all()
-    serializer_class = DeliveryProof
+    serializer_class = DeliveryProofSerializer
 
 
