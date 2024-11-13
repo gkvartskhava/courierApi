@@ -1,7 +1,7 @@
 from rest_framework  import viewsets,status
 from rest_framework.response import Response
 from .models import *
-from .serializers import *
+from .serializers import ParcelSerializer,CustomUserSerializer,DeliveryProofSerializer
 
 class CustomUserViewset(viewsets.ModelViewSet):
     queryset = CustomUser.objects.all()
