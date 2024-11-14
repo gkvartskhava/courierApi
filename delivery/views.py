@@ -1,6 +1,6 @@
 from rest_framework  import viewsets,status
 from rest_framework.response import Response
-from .models import *
+from .models import Parcel,CustomUser,DeliveryProof
 from .serializers import ParcelSerializer,CustomUserSerializer,DeliveryProofSerializer
 
 class CustomUserViewset(viewsets.ModelViewSet):
