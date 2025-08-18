@@ -245,14 +245,4 @@ CACHES = {
 - `DEBUG` is set to `True` by default. For production, set `DEBUG=False` and configure `ALLOWED_HOSTS`.
 - Database is configured via environment variables for PostgreSQL.
 
----
 
-## 🛡️ Admin
-
-- Visit `/admin/` and log in with the superuser created during setup.
-
----
-
-## 📄 License
-
-Add your preferred license here (e.g., MIT, Apache-2.0).
