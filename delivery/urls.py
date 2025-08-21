@@ -12,4 +12,5 @@ router.register(r'delivery_proof',DeliveryProofViewset)
 
 urlpatterns = [
     path('api/',include(router.urls)),
+    
 ]
